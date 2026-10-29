@@ -32,7 +32,7 @@ npm run package
 
 The test suite uses mocks to exercise revisions, cancellations, duplicate handling, and collision protection. The isolated Thunderbird smoke test also exercised the real calendar parser and memory provider, but is not yet automated in this repository. Full integration tests should cover the mail event, MIME decoding, local and SOGo calendars, restarts, offline behavior, recurring exceptions, and actual outbound scheduling behavior.
 
-The included dev container and GitHub Actions workflow support developing and running the tests in GitHub Codespaces after this directory is pushed to a GitHub repository. The Thunderbird UI and real-calendar integration tests still require a local Thunderbird installation or a suitably configured graphical test environment. Before publishing, choose a permanent extension ID on a domain you control, and review the Experiment, privacy implications, and Thunderbird Add-ons policies.
+The included dev container supports developing and running the tests in GitHub Codespaces. A GitHub Actions workflow template is provided in `.github/workflow-templates/test.yml`; move it into `.github/workflows/` to enable it after granting the GitHub credential permission to update workflows. The Thunderbird UI and real-calendar integration tests still require a local Thunderbird installation or a suitably configured graphical test environment. Before publishing, choose a permanent extension ID on a domain you control, and review the Experiment, privacy implications, and Thunderbird Add-ons policies.
 
 ## References
 
