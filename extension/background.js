@@ -1,4 +1,4 @@
-/* Copyright 2026 Invitation Mirror contributors. MIT */
+/* Copyright 2026 Invite to Calendar contributors. MIT */
 // Serialize processing to avoid concurrent updates racing for the same UID.
 let queue = Promise.resolve();
 async function processMessage(id, calendarId) {
@@ -13,13 +13,13 @@ async function processMessage(id, calendarId) {
       bodies.add(await (await browser.messages.getAttachmentFile(id, attachment.partName)).text());
     }
   }
-  for (const body of bodies) console.info("Invitation Mirror:", await browser.invitationMirror.apply(calendarId, body));
+  for (const body of bodies) console.info("Invite to Calendar:", await browser.invitationMirror.apply(calendarId, body));
 }
 async function processList(list, calendarId) {
   do {
     for (const message of list.messages) {
       try { await processMessage(message.id, calendarId); }
-      catch (error) { console.error("Invitation Mirror: failed to process message", error); }
+      catch (error) { console.error("Invite to Calendar: failed to process message", error); }
     }
     list = list.id ? await browser.messages.continueList(list.id) : null;
   } while (list);
@@ -28,5 +28,5 @@ browser.messages.onNewMailReceived.addListener((_folder, messages) => {
   queue = queue.then(async () => {
     const { enabled, calendarId } = await browser.storage.local.get(["enabled", "calendarId"]);
     if (enabled && calendarId) await processList(messages, calendarId);
-  }).catch(error => console.error("Invitation Mirror:", error));
+  }).catch(error => console.error("Invite to Calendar:", error));
 });

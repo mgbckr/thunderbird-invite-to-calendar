@@ -1,4 +1,4 @@
-# Invitation Mirror
+# Invite to Calendar
 
 An experimental Thunderbird extension that copies newly received iCalendar invitations into a selected Thunderbird calendar, without accepting or declining them. The copy is a normal calendar event, not an iTIP response. The extension uses the Thunderbird calendar provider directly, removes organizer, attendees and alarms from copies, and does not use a mail-sending API. For an update it finds the same UID and only changes entries previously created by this extension. A cancellation marks the existing copy `CANCELLED`.
 
@@ -7,7 +7,7 @@ An experimental Thunderbird extension that copies newly received iCalendar invit
 ## Try it
 
 1. Use Thunderbird **153.x**. This version range is intentional: the extension uses Thunderbird internals that can change between releases. Open Calendar and create a separate local test calendar.
-2. In Add-ons and Themes, open the gear menu and choose **Install Add-on From File**, then select the built `dist/invitation-mirror.xpi`. Alternatively, choose **Debug Add-ons**, load the `extension/manifest.json` file temporarily, and keep Thunderbird open. A temporary installation is removed when Thunderbird exits.
+2. In Add-ons and Themes, open the gear menu and choose **Install Add-on From File**, then select the built `dist/invite-to-calendar.xpi`. Alternatively, choose **Debug Add-ons**, load the `extension/manifest.json` file temporarily, and keep Thunderbird open. A temporary installation is removed when Thunderbird exits.
 3. Open the add-on's settings, select the test calendar, enable automatic processing, and save.
 4. While Thunderbird is running, send an invitation to the account, then send an update and a cancellation. Check the calendar, and check that no response was sent. Inspect the add-on console for errors if needed.
 

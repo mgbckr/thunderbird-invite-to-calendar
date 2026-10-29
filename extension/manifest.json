@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Invitation Mirror",
+  "name": "Invite to Calendar",
   "description": "Shows incoming invitations in a calendar without responding to them.",
   "version": "0.1.0",
   "browser_specific_settings": { "gecko": { "id": "invitation-mirror@community.invalid", "strict_min_version": "153.0", "strict_max_version": "153.*" } },

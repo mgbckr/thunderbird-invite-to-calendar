@@ -1,4 +1,4 @@
-/* Copyright 2026 Invitation Mirror contributors. MIT */
+/* Copyright 2026 Invite to Calendar contributors. MIT */
 var { ExtensionCommon: { ExtensionAPI } } = ChromeUtils.importESModule("resource://gre/modules/ExtensionCommon.sys.mjs");
 var { cal } = ChromeUtils.importESModule("resource:///modules/calendar/calUtils.sys.mjs");
 
