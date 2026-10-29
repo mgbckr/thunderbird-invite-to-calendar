@@ -1,0 +1,8 @@
+[
+  {"namespace":"invitationMirror","functions":[
+    {"name":"calendars","type":"function","async":true,"parameters":[]},
+    {"name":"apply","type":"function","async":true,"parameters":[
+      {"name":"calendarId","type":"string"}, {"name":"ical","type":"string"}
+    ]}
+  ]}
+]

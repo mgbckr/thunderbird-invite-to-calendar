@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "Invitation Mirror",
+  "description": "Shows incoming invitations in a calendar without responding to them.",
+  "version": "0.1.0",
+  "browser_specific_settings": { "gecko": { "id": "invitation-mirror@community.invalid", "strict_min_version": "153.0", "strict_max_version": "153.*" } },
+  "permissions": ["accountsRead", "messagesRead", "storage"],
+  "background": { "scripts": ["background.js"] },
+  "options_ui": { "page": "options.html", "open_in_tab": true },
+  "experiment_apis": {
+    "invitationMirror": {
+      "schema": "experiment/schema.json",
+      "parent": { "scopes": ["addon_parent"], "paths": [["invitationMirror"]], "script": "experiment/parent.js" }
+    }
+  }
+}

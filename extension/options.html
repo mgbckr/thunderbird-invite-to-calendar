@@ -1,0 +1,8 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Invitation Mirror settings</title><link rel="stylesheet" href="options.css"></head><body>
+<main><h1>Invitation Mirror</h1><p>Show newly received invitations in a calendar without responding to the organizer.</p>
+<form id="settings"><label for="calendar">Destination calendar</label><select id="calendar" required></select>
+<label class="check"><input id="enabled" type="checkbox"> Automatically process new invitations</label>
+<p>Invitations are copied without attendees, organizer, or reminders. Cancellations are marked cancelled.</p>
+<button type="submit">Save settings</button> <span id="status" role="status"></span></form>
+<p>Only new messages received while Thunderbird is running are processed. Test with a separate calendar first.</p></main>
+<script src="options.js"></script></body></html>
